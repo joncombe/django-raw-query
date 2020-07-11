@@ -31,7 +31,7 @@ class RawQuery:
     # return a list of single values
     # e.g. SELECT id FROM my_table
     # [1, 2, 3, 4, 5]
-    def flat_list(self, sql):
+    def multiple_values(self, sql):
         cursor = self._do_query(sql)
         return [row[0] for row in cursor.fetchall()]
 

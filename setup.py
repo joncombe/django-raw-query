@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='django-raw-query',
-    version='0.0.1',
+    version='0.0.3',
     author=u'Jon Combe',
     author_email='me@joncombe.net',
     packages=find_packages(),
@@ -12,6 +12,8 @@ setup(
     install_requires=[],
     license='BSD licence, see LICENCE file',
     description='Simple raw database query helper for Django',
+    long_description='View readme on github: https://github.com/joncombe/django-raw-query',
+    url='https://github.com/joncombe/django-raw-query',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
