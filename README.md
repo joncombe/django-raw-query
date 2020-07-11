@@ -26,7 +26,7 @@ from rawquery import RawQuery
 rq = RawQuery()
 ```
 
-There are 5 functions you can all. All of have two parameters, an SQL string, and, optionally, a list of parameters. To protect against SQL injection, you must not include quotes around the %s placeholders in the SQL string.
+There are 5 functions you can all. They all have two parameters: an SQL string, and, optionally, a list of parameters. To protect against SQL injection, you must not include quotes around the %s placeholders in the SQL string.
 
 ### Fetch a single row: a dict
 ```
