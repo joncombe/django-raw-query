@@ -26,7 +26,7 @@ from rawquery import RawQuery
 rq = RawQuery()
 ```
 
-There are 5 functions you can all. They all have two parameters: an SQL string, and, optionally, a list of parameters. To protect against SQL injection, you must not include quotes around the %s placeholders in the SQL string.
+There are 5 functions you can call. They all have the same two parameters: an SQL string, and, optionally, a list of parameters. To protect against SQL injection, you must not include quotes around the %s placeholders in the SQL string.
 
 ### Fetch a single row: a dict
 ```
@@ -47,12 +47,12 @@ rq.multiple_rows('SELECT * FROM my_table')
 # ]
 ```
 
-### Fetch a single value: a single value, e.g. int, str, etc.
+### Fetch a single value: e.g. an integer, string, etc.
 ```
 rq.single_value('SELECT COUNT(*) FROM my_table')
 
 # output:
-2
+# 2
 ```
 
 ### Fetch multiple values: a list of values
