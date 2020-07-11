@@ -26,9 +26,11 @@ from rawquery import RawQuery
 rq = RawQuery()
 ```
 
+There are 5 functions you can all. All of have two parameters, an SQL string, and, optionally, a list of parameters. To protect against SQL injection, you must not include quotes around the %s placeholders in the SQL string.
+
 ### Fetch a single row: a dict
 ```
-rq.single_row('SELECT * FROM my_table LIMIT 1')
+rq.single_row('SELECT * FROM my_table WHERE id = %s', [1])
 
 # output:
 # { 'id': 1, 'name': 'Thomas', 'class': 'G4R' }
@@ -63,8 +65,11 @@ rq.multiple_values('SELECT name FROM my_table')
 
 ### UPDATE or INSERT
 ```
-rq.run("UPDATE my_table SET name = 'Douglas' WHERE id = 1")
+rq.run("UPDATE my_table SET name = %s WHERE id = %s", ['Douglas', 1])
 
 # output:
 # 1  # cursor.rowcount
 ```
+
+---
+Final note: This class does not cater for multiple databases but it would be trivial to add. If anybody would like to add this, or any other feature, pull requests are welcome.
