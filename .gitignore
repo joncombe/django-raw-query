@@ -1,0 +1,4 @@
+*.pyc
+dist/
+django_raw_query.egg-info/
+.DS_Store
